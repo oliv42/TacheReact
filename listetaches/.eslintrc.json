@@ -1,23 +1,32 @@
 {
-    "extends": [
-        "next/core-web-vitals",
-        "next/babel",
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+  "extends": [
+    "next/core-web-vitals",
+    "next/babel",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "plugins": ["react", "@typescript-eslint"],
-    "rules": {
-        // Ajoutez ici les règles spécifiques que vous souhaitez appliquer
-        // Exemple:
-        // 'react/prop-types': 'off', // Désactive la vérification des types de props
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    // Ajoutez ici les règles spécifiques que vous souhaitez appliquer
+    // Exemple:
+    // 'react/prop-types': 'off', // Désactive la vérification des types de props
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80, // Limite de 80 caractères
+        "singleQuote": true, // Utiliser des guillemets simples
+        "semi": false // Pas de point-virgule en fin de ligne
+        // Autres options Prettier...
+      }
+    ]
+  }
 }
