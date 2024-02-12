@@ -8,10 +8,17 @@ import listeTaches from '../../../../tache.js';
 const Task = () => {
   const [tasks, setTasks] = useState(listeTaches);
 
+  //todo: changer le statut de la tâche
   const handleChangeStatut = (index) => {
     setTasks((prevState) => {
-      console.log(prevState[index]);
-      return prevState;
+      const listTaskStatusChanged = prevState.map((task, i) => {
+        if (i === index) {
+          return { ...task, statut: !task.statut };
+        }
+        return { ...task };
+      });
+      console.log(listTaskStatusChanged);
+      return listTaskStatusChanged;
     });
   };
 
