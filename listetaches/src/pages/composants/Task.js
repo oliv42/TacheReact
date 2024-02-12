@@ -8,7 +8,6 @@ import listeTaches from '../../../../tache.js';
 const Task = () => {
   const [tasks, setTasks] = useState(listeTaches);
 
-  //todo: changer le statut de la tâche
   const handleChangeStatut = (index) => {
     setTasks((prevState) => {
       const listTaskStatusChanged = prevState.map((task, i) => {
@@ -29,7 +28,7 @@ const Task = () => {
           <div
             className={`p-9 rounded-2xl border-4 ${
               task.statut ? 'border-green-700' : 'border-blue-500'
-            } transition duration-300 hover:bg-slate-600`}
+            } transition ease-in-out duration-700 hover:bg-slate-600`}
             key={index}
           >
             <Title title={task.titre} />

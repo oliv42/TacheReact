@@ -1,3 +1,5 @@
+import DeleteTask from './DelecteTask';
+
 const StatusTask = ({ status, handleChangeStatut }) => {
   return (
     <div
@@ -18,6 +20,7 @@ const StatusTask = ({ status, handleChangeStatut }) => {
       >
         Fait
       </label>
+      {status ? <DeleteTask /> : null}
     </div>
   );
 };
